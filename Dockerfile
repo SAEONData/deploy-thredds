@@ -93,6 +93,8 @@ RUN mkdir -p ${CATALINA_HOME}/content/thredds
 
 COPY files/threddsConfig.xml ${CATALINA_HOME}/content/thredds/threddsConfig.xml
 
+#COPY files/NRF-Icon.jpg ${CATALINA_HOME}/webapps/thredds/NRF-Icon.jpg
+
 ###
 # Tomcat users
 ###

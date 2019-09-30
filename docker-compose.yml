@@ -9,7 +9,7 @@ services:
       - "443:8443"
       - "8443:8443"
 
-  thredds-production:
+  thredds-development:
     image: unidata/thredds-docker:4.6.14
     ports:
       - "80:8080"
@@ -19,10 +19,9 @@ services:
     volumes:
       - /opt/data-thredds-docker/tomcat/logs:/usr/local/tomcat/logs
       - /opt/data-thredds-docker/thredds/logs:/usr/local/tomcat/content/thredds/logs
+      - /opt/data-thredds-docker/thredds/:/usr/local/tomcat/content/thredds
       - /opt/data-thredds-docker/tomcat/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
-      - /opt/data-thredds-docker/thredds:/usr/local/tomcat/content/thredds
-      - /opt/data-thredds-docker/data/directory1:/path/to/your/data/directory1
-      - /opt/data-thredds-docker/data/directory2:/path/to/your/data/directory2
+      - /opt/data-thredds-docker/webconf:/usr/local/tomcat/webapps/thredds
     env_file:
       - "compose${THREDDS_COMPOSE_ENV_LOCAL}.env"
 
