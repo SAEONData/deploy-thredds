@@ -1,0 +1,86 @@
+BODY {
+  height: 54px;
+  font-family: OpenSans;
+  font-size: 13px;
+  /*font-weight: 600*/;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  /*letter-spacing: -0.41px*/;
+  color: black;
+  
+
+}
+
+H1 {
+  font-display: block
+  font-family: Roboto;
+  color: white;
+  /*background-color: #525D76*/;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    
+}
+
+H2 {
+  font-family: Tahoma, Arial, sans-serif;
+  color: white;
+  background-color: #525D76;
+  font-size: 16px;
+}
+
+H3 > br {
+    margin: 10px;
+}
+
+H3 {
+  /*width: 118px;*/
+  height: 19px;
+  font-family: OpenSans;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #818ea3;
+    text-align: center;
+  /*font-family: Tahoma, Arial, sans-serif;
+  color: white;
+  background-color: #525D76;
+  font-size: 14px;*/
+}
+
+B {
+  font-family: Tahoma, Arial, sans-serif;
+  color: black;
+  background-color: #525D76;
+}
+
+P {
+  font-family: Tahoma,Arial,sans-serif;
+  background: white;
+  color: black;
+  font-size: 12px;
+}
+
+A {
+  height: 54px;
+  font-family: OpenSans;
+  font-size: 13px;
+  /*font-weight: 600;*/
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.41px;
+  color: black;
+}
+
+A.name {
+  color : black;
+}
+
+HR {
+  color : #525D76;
+}
