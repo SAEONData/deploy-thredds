@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="SAEON THREDDS Server Catalog"
+         xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0
+           http://www.unidata.ucar.edu/schemas/thredds/InvCatalog.1.0.6.xsd">
+
+  <service name="all" base="" serviceType="compound">
+    <service name="odap" serviceType="OpenDAP" base="/thredds/dodsC/" />
+    <!--service name="dap4" serviceType="DAP4" base="/thredds/dap4/" /-->
+    <service name="http" serviceType="HTTPServer" base="/thredds/fileServer/" />
+    <service name="wcs" serviceType="WCS" base="/thredds/wcs/" />
+    <service name="wms" serviceType="WMS" base="/thredds/wms/" />
+    <service name="ncss" serviceType="NetcdfSubset" base="/thredds/ncss/" />
+  </service>
+
+  <!--service name="dap" base="" serviceType="compound">
+    <service name="odap" serviceType="OpenDAP" base="/thredds/dodsC/" />
+    <service name="dap4" serviceType="DAP4" base="/thredds/dap4/" />
+  </service-->
+
+  <!--datasetRoot path="test" location="content/CC_ATLAS" /-->
+  
+  <datasetScan name="SAEON.SAWS" ID="SAEON.SAWS"
+               path="SAEON.SAWS" location="content/CC_ATLAS">
+    <metadata inherited="true">
+      <serviceName>all</serviceName>
+      <dataType>Grid</dataType>
+    </metadata>
+  </datasetScan>
+
+  <datasetScan name="SAEON.EGAGASINI" ID="SAEON.EGAGASINI"
+               path="SAEON.EGAGASINI" location="/mnt/multidimfs/SAEON.EGAGASINI">
+    <metadata inherited="true">
+      <serviceName>all</serviceName>
+      <dataType>Grid</dataType>
+    </metadata>
+  </datasetScan>
+
+  <datasetScan name="SAEON.FYNBOS" ID="SAEON.FYNBOS"
+               path="SAEON.FYNBOS" location="/mnt/multidimfs/SAEON.FYNBOS">
+    <metadata inherited="true">
+      <serviceName>all</serviceName>
+      <dataType>Grid</dataType>
+    </metadata>
+  </datasetScan>
+
+  <datasetScan name="SAEON.uLwazi" ID="SAEON.uLwazi"
+               path="SAEON.uLwazi" location="/mnt/multidimfs/SAEON.ulwazi">
+    <metadata inherited="true">
+      <serviceName>all</serviceName>
+      <dataType>Grid</dataType>
+    </metadata>
+  </datasetScan>
+
+  <datasetScan name="SAEON.EGAGASINI" ID="SAEON.EGAGASINI2"
+               path="SAEON.EGAGASINI/2019.Penven" location="/mnt/ROMS/DAILY_MEANS">
+    <metadata inherited="true">
+      <serviceName>all</serviceName>
+      <dataType>Grid</dataType>
+    </metadata>
+  </datasetScan>
+
+
+  <datasetScan name="SAEON.SANBI" ID="SAEON.SANBI"
+               path="SAEON.SANBI" location="/mnt/multidimfs/SAEON.SANBI">
+    <metadata inherited="true">
+      <serviceName>all</serviceName>
+      <dataType>Grid</dataType>
+    </metadata>
+  </datasetScan>
+
+  <!--dataset name="Interpolated observed weather data for the Cape Floristic Region" ID="Hello"
+           serviceName="all"  urlPath="mnt/multidimfs/SAEON.FYNBOS/2014.Wilson_Silander/0.0/weather_fine.nc" dataType="Grid"/>
+
+  <dataset name="Test Single Dataset 2" ID="testDataset2"
+           serviceName="odap" urlPath="test/testData2.grib2" dataType="Grid"/>
+
+  <datasetScan name="Test all files in a directory" ID="testDatasetScan"
+               path="testAll" location="content/testdata">
+    <metadata inherited="true">
+      <serviceName>all</serviceName>
+      <dataType>Grid</dataType>
+    </metadata>
+
+    <filter>
+      <include wildcard="*eta_211.nc"/>
+      <include wildcard="testgrid*.nc"/>
+    </filter>
+  </datasetScan>
+
+  <catalogRef xlink:title="Test Enhanced Catalog" xlink:href="enhancedCatalog.xml" name=""/-->
+</catalog>
